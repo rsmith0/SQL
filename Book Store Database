@@ -1,0 +1,23 @@
+--Create a bookstore data base
+
+CREATE TABLE Books (ID INTEGER PRIMARY KEY, Title TEXT, Cost integer, Inventory integer);
+
+INSERT INTO Books VALUES (1, "Ghost", 13, 10);
+INSERT INTO Books VALUES (2, "Me Before You", 16, 12);
+INSERT INTO Books VALUES (3, "Not You Again", 14, 5);
+INSERT INTO Books VALUES (4, "Better Than the Movies", 17, 22); 
+INSERT INTO Books VALUES (5, "Ugly Love", 12, 9);
+INSERT INTO Books VALUES (6, "Flatshare", 13, 11);
+INSERT INTO Books VALUES (7, "Book Lover", 15, 3);
+INSERT INTO Books VALUES (8, "Rootbound", 12, 8);
+INSERT INTO Books VALUES (9, "The Catch", 13, 14);
+INSERT INTO Books VALUES (10, "The Rules", 13, 12);
+
+--display the database ordered by Cost. 
+SELECT * FROM Books
+ORDER BY Cost desc; 
+
+--what books need to be reordered?
+SELECT * FROM Books 
+WHERE Inventory <=10
+ORDER BY Title;
