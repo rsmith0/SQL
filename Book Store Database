@@ -1,4 +1,4 @@
---Create a bookstore data base
+--Create a book store data base
 
 CREATE TABLE Books (ID INTEGER PRIMARY KEY, Title TEXT, Cost integer, Inventory integer);
 
